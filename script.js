@@ -285,5 +285,204 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+    // --- 10. SLIDE-OUT CART DRAWER ---
+    const cartTriggers = document.querySelectorAll('.iscart, .add-to-cart');
+    const bodyEl = document.body;
+    let cartDrawer = document.querySelector('.cart-drawer');
+    let cartDrawerOverlay = document.querySelector('.cart-drawer-overlay');
+
+    // Create Drawer DOM if it doesn't exist
+    if (!cartDrawer) {
+        cartDrawer = document.createElement('div');
+        cartDrawer.className = 'cart-drawer';
+        cartDrawer.innerHTML = `
+            <div class="cart-drawer__header">
+                <h3>Your Bag</h3>
+                <button class="cart-drawer__close" aria-label="Close Bag"><i class="ri-close-line"></i></button>
+            </div>
+            <div class="cart-drawer__body" id="cart-drawer-items">
+                <!-- Items inject here -->
+            </div>
+            <div class="cart-drawer__footer">
+                <div class="flex-between mb-md">
+                    <span>Subtotal</span>
+                    <strong class="cart-drawer-total">$0.00</strong>
+                </div>
+                <a href="#" class="btn btn--primary" style="width:100%">Checkout</a>
+            </div>
+        `;
+        bodyEl.appendChild(cartDrawer);
+
+        cartDrawerOverlay = document.createElement('div');
+        cartDrawerOverlay.className = 'cart-drawer-overlay';
+        bodyEl.appendChild(cartDrawerOverlay);
+    }
+
+    const closeCartDrawer = () => {
+        cartDrawer.classList.remove('open');
+        cartDrawerOverlay.classList.remove('active');
+        bodyEl.classList.remove('no-scroll');
+    };
+
+    const openCartDrawer = () => {
+        cartDrawer.classList.add('open');
+        cartDrawerOverlay.classList.add('active');
+        bodyEl.classList.add('no-scroll');
+        
+        // Update Drawer UI
+        const drawerTotal = cartDrawer.querySelector('.cart-drawer-total');
+        if (drawerTotal) {
+            drawerTotal.textContent = `$${cartTotalValue.toFixed(2)}`;
+        }
+    };
+
+    cartDrawer.querySelector('.cart-drawer__close').addEventListener('click', closeCartDrawer);
+    cartDrawerOverlay.addEventListener('click', closeCartDrawer);
+
+    // Override existing add to cart logic to also open the drawer and add items visually
+    addToCartBtns.forEach(btn => {
+        // Remove existing click to avoid duplicate bindings if needed, but since it's anonymous we'll just handle drawer logic here
+        btn.addEventListener('click', (e) => {
+            const price = parseFloat(btn.getAttribute('data-price') || 0);
+            const name = btn.getAttribute('data-name') || 'Premium Item';
+            const img = btn.getAttribute('data-image') || 'assets/products/watch.png';
+
+            const itemsContainer = document.getElementById('cart-drawer-items');
+            if (itemsContainer) {
+                // If cart was previously empty, clear any empty state messages
+                if (itemsContainer.innerHTML.includes('Your bag is empty')) {
+                    itemsContainer.innerHTML = '';
+                }
+
+                const itemHTML = `
+                    <div class="cart-drawer-item">
+                        <div class="cart-drawer-item__image">
+                            <img src="${img}" alt="${name}">
+                        </div>
+                        <div class="cart-drawer-item__details">
+                            <h4 class="cart-drawer-item__title">${name}</h4>
+                            <span class="cart-drawer-item__price">$${price.toFixed(2)}</span>
+                            <div class="cart-drawer-item__actions">
+                                <button class="cart-drawer-item__remove">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                itemsContainer.insertAdjacentHTML('beforeend', itemHTML);
+            }
+            
+            // Open drawer after a slight delay
+            setTimeout(openCartDrawer, 200);
+        });
+    });
+
+    // Also bind header cart icons to open drawer
+    document.querySelectorAll('.iscart').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCartDrawer();
+        });
+    });
+
+    // --- 11. QUICK VIEW MODAL ---
+    const quickViewBtns = document.querySelectorAll('.action-btn[aria-label="Quick View"]');
+    let quickViewModal = document.querySelector('.quick-view-modal');
+
+    if (!quickViewModal) {
+        quickViewModal = document.createElement('div');
+        quickViewModal.className = 'quick-view-modal';
+        quickViewModal.innerHTML = `
+            <div class="quick-view-modal__overlay"></div>
+            <div class="quick-view-modal__content">
+                <button class="quick-view-modal__close"><i class="ri-close-line"></i></button>
+                <div class="quick-view-modal__image">
+                    <img src="" alt="Product" id="qv-image">
+                </div>
+                <div class="quick-view-modal__info">
+                    <span class="overline" id="qv-category">Category</span>
+                    <h2 class="mt-sm mb-md" id="qv-title">Product Name</h2>
+                    <h3 class="mb-md" style="color:var(--accent)" id="qv-price">$0.00</h3>
+                    <p class="body-large mb-lg">A quick glance at this premium item. Experience the pinnacle of design and craftsmanship.</p>
+                    <button class="btn btn--primary add-to-cart" id="qv-add-btn" data-price="0" data-name="Product" data-image="">Add to Bag</button>
+                </div>
+            </div>
+        `;
+        bodyEl.appendChild(quickViewModal);
+    }
+
+    const closeQV = () => {
+        quickViewModal.classList.remove('active');
+        bodyEl.classList.remove('no-scroll');
+    };
+
+    quickViewModal.querySelector('.quick-view-modal__close').addEventListener('click', closeQV);
+    quickViewModal.querySelector('.quick-view-modal__overlay').addEventListener('click', closeQV);
+
+    quickViewBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = btn.closest('.product-card');
+            if(card) {
+                const title = card.querySelector('.product-card__title a').textContent;
+                const priceText = card.querySelector('.product-card__price .current').textContent;
+                const category = card.querySelector('.product-card__category').textContent;
+                const imgStr = card.querySelector('.product-card__image img').getAttribute('src');
+
+                const numPrice = parseFloat(priceText.replace('$', '').replace(',', ''));
+
+                document.getElementById('qv-title').textContent = title;
+                document.getElementById('qv-price').textContent = priceText;
+                document.getElementById('qv-category').textContent = category;
+                document.getElementById('qv-image').setAttribute('src', imgStr);
+                
+                const addBtn = document.getElementById('qv-add-btn');
+                addBtn.setAttribute('data-price', numPrice);
+                addBtn.setAttribute('data-name', title);
+                addBtn.setAttribute('data-image', imgStr);
+
+                quickViewModal.classList.add('active');
+                bodyEl.classList.add('no-scroll');
+            }
+        });
+    });
+
+    // --- 12. DYNAMIC FILTERING (Category Pages) ---
+    const filterLinks = document.querySelectorAll('.filter-list a');
+    const productCards = document.querySelectorAll('.category-content .product-card');
+
+    if (filterLinks.length > 0 && productCards.length > 0) {
+        filterLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Update active state
+                filterLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Get filter criteria from text (simplified for demo)
+                const filterText = link.textContent.toLowerCase();
+                
+                productCards.forEach(card => {
+                    const category = card.querySelector('.product-card__category').textContent.toLowerCase();
+                    
+                    // Start animation
+                    card.classList.add('filtering');
+                    
+                    setTimeout(() => {
+                        if (filterText.includes('all') || filterText.includes(category) || category.includes(filterText.split(' ')[0])) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                        
+                        // End animation
+                        setTimeout(() => {
+                            card.classList.remove('filtering');
+                        }, 50);
+                    }, 350); // wait for fade out
+                });
+            });
+        });
+    }
 
 });
