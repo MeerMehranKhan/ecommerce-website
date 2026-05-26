@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted Leather Oxfords | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header class="header scrolled">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="page-category.html">Collections</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--nav-height-scrolled);">
+        <div class="container">
+            <div class="breadcrumb reveal-up pt-xl pb-md">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-category.html">Footwear</a></li>
+                    <li>Handcrafted Leather Oxfords</li>
+                </ul>
+            </div>
+
+            <div class="product-single">
+                <div class="product-single__gallery reveal-up stagger-1">
+                    <div class="product-gallery__main">
+                        <img src="assets/products/shoes-oxford.png" alt="Handcrafted Leather Oxfords">
+                    </div>
+                </div>
+
+                <div class="product-single__info reveal-up stagger-2">
+                    <span class="overline">Artisan Crafted</span>
+                    <h1 class="product-single__title mt-sm mb-md">Handcrafted Leather Oxfords</h1>
+                    <div class="product-single__price-row mb-lg">
+                        <div class="price">
+                            <span class="current">$890.00</span>
+                        </div>
+                    </div>
+
+                    <p class="body-large mb-xl">
+                        Bench-made by master artisans. Featuring a rich patina and Goodyear welt construction for enduring elegance.
+                    </p>
+
+                    <div class="product-single__actions">
+                        <div class="qty-control">
+                            <button class="minus"><i class="ri-subtract-line"></i></button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="plus"><i class="ri-add-line"></i></button>
+                        </div>
+                        <button class="btn btn--primary btn--lg add-to-cart" data-price="890.00" data-name="Handcrafted Leather Oxfords" data-image="assets/products/shoes-oxford.png">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

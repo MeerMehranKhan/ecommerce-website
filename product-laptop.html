@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Obsidian Laptop | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="has-child">
+                            <a href="page-category.html">Collections <i class="ri-arrow-down-s-line"></i></a>
+                        </li>
+                        <li><a href="page-offer.html">Exclusives</a></li>
+                        <li><a href="#">Editorials</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="header__action-btn t-search desktop-only" aria-label="Search"><i class="ri-search-line"></i></button>
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--nav-height-scrolled);">
+        
+        <div class="container">
+            <div class="breadcrumb reveal-up pt-xl pb-md">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-category.html">Electronics</a></li>
+                    <li>The Obsidian Laptop</li>
+                </ul>
+            </div>
+
+            <div class="product-single">
+                
+                <div class="product-single__gallery reveal-up stagger-1">
+                    <div class="product-gallery">
+                        <div class="product-gallery__main">
+                            <img src="assets/products/laptop.png" alt="The Obsidian Laptop">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-single__info reveal-up stagger-2">
+                    <span class="overline">Ultra-Premium Tech</span>
+                    <h1 class="product-single__title mt-sm mb-md">The Obsidian Studio Laptop</h1>
+                    <div class="product-single__price-row mb-lg">
+                        <div class="price">
+                            <span class="current">$3,899.00</span>
+                        </div>
+                        <div class="product-card__rating">
+                            <div class="product-card__stars">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            </div>
+                            <span>(120 Reviews)</span>
+                        </div>
+                    </div>
+
+                    <p class="body-large mb-xl">
+                        Engineered from a single block of aerospace-grade aluminum. Featuring an edge-to-edge OLED display and unparalleled processing power wrapped in a striking dark finish.
+                    </p>
+
+                    <div class="product-single__options mb-xl">
+                        <div class="option-group">
+                            <h4 class="mb-sm">Storage</h4>
+                            <div class="size-options">
+                                <input type="radio" id="s1" name="storage" class="sr-only" checked>
+                                <label for="s1">1TB</label>
+                                
+                                <input type="radio" id="s2" name="storage" class="sr-only">
+                                <label for="s2">2TB</label>
+
+                                <input type="radio" id="s3" name="storage" class="sr-only">
+                                <label for="s3">4TB</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-single__actions">
+                        <div class="qty-control">
+                            <button class="minus" aria-label="Decrease quantity"><i class="ri-subtract-line"></i></button>
+                            <input type="number" value="1" min="1" max="10" aria-label="Quantity">
+                            <button class="plus" aria-label="Increase quantity"><i class="ri-add-line"></i></button>
+                        </div>
+                        <button class="btn btn--primary btn--lg add-to-cart" data-price="3899.00" data-name="The Obsidian Studio Laptop" data-image="assets/products/laptop.png">
+                            Add to Bag
+                        </button>
+                    </div>
+
+                    <div class="product-single__meta mt-xl">
+                        <div class="meta-item">
+                            <i class="ri-truck-line"></i>
+                            <span>Complimentary insured worldwide shipping.</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="ri-shield-check-line"></i>
+                            <span>3-Year International Warranty included.</span>
+                        </div>
+                    </div>
+
+                    <div class="product-single__accordions mt-xl">
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                <span>Technical Specifications</span>
+                                <i class="ri-add-line"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul style="padding: 10px 0; color: var(--text-secondary); line-height: 1.8;">
+                                    <li><strong>Processor:</strong> Custom 16-Core Silicon</li>
+                                    <li><strong>Memory:</strong> 64GB Unified RAM</li>
+                                    <li><strong>Display:</strong> 16" 4K OLED, 120Hz</li>
+                                    <li><strong>Chassis:</strong> Machined Aluminum</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom reveal-up">
+                <p>&copy; 2026 É·STORE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

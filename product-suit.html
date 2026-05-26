@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bespoke Tailored Suit | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header class="header scrolled">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="page-category.html">Collections</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--nav-height-scrolled);">
+        <div class="container">
+            <div class="breadcrumb reveal-up pt-xl pb-md">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-category.html">Apparel</a></li>
+                    <li>Bespoke Tailored Suit</li>
+                </ul>
+            </div>
+
+            <div class="product-single">
+                <div class="product-single__gallery reveal-up stagger-1">
+                    <div class="product-gallery__main">
+                        <img src="assets/products/suit.png" alt="Bespoke Tailored Suit">
+                    </div>
+                </div>
+
+                <div class="product-single__info reveal-up stagger-2">
+                    <span class="overline">Sartorial Excellence</span>
+                    <h1 class="product-single__title mt-sm mb-md">Bespoke Tailored Suit Jacket</h1>
+                    <div class="product-single__price-row mb-lg">
+                        <div class="price">
+                            <span class="current">$2,800.00</span>
+                        </div>
+                    </div>
+
+                    <p class="body-large mb-xl">
+                        Hand-stitched from the finest Italian wool. A charcoal grey masterpiece that offers a flawless silhouette and timeless elegance.
+                    </p>
+
+                    <div class="product-single__actions">
+                        <div class="qty-control">
+                            <button class="minus"><i class="ri-subtract-line"></i></button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="plus"><i class="ri-add-line"></i></button>
+                        </div>
+                        <button class="btn btn--primary btn--lg add-to-cart" data-price="2800.00" data-name="Bespoke Tailored Suit Jacket" data-image="assets/products/suit.png">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

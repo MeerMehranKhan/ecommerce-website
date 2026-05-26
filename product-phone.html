@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanium Signature Phone | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="page-category.html">Collections</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--nav-height-scrolled);">
+        <div class="container">
+            <div class="breadcrumb reveal-up pt-xl pb-md">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-category.html">Electronics</a></li>
+                    <li>Titanium Signature Phone</li>
+                </ul>
+            </div>
+
+            <div class="product-single">
+                <div class="product-single__gallery reveal-up stagger-1">
+                    <div class="product-gallery__main">
+                        <img src="assets/products/phone.png" alt="Titanium Signature Phone">
+                    </div>
+                </div>
+
+                <div class="product-single__info reveal-up stagger-2">
+                    <span class="overline">Exclusive Release</span>
+                    <h1 class="product-single__title mt-sm mb-md">Titanium Signature Phone</h1>
+                    <div class="product-single__price-row mb-lg">
+                        <div class="price">
+                            <span class="current">$1,499.00</span>
+                        </div>
+                    </div>
+
+                    <p class="body-large mb-xl">
+                        Forged from solid titanium with an edge-to-edge crystalline display. Experience the convergence of high-fashion aesthetics and bleeding-edge mobile technology.
+                    </p>
+
+                    <div class="product-single__actions">
+                        <div class="qty-control">
+                            <button class="minus"><i class="ri-subtract-line"></i></button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="plus"><i class="ri-add-line"></i></button>
+                        </div>
+                        <button class="btn btn--primary btn--lg add-to-cart" data-price="1499.00" data-name="Titanium Signature Phone" data-image="assets/products/phone.png">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
