@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Ready-to-Wear | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="has-child">
+                            <a href="page-category.html" class="active">Collections <i class="ri-arrow-down-s-line"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu__grid">
+                                    <div class="mega-menu__col">
+                                        <h5>Women's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Dresses & Gowns</a></li>
+                                            <li><a href="#">Jackets & Coats</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Tops & Shirts</a></li>
+                                            <li><a href="#">Trousers & Skirts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Men's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Tailoring</a></li>
+                                            <li><a href="#">Outerwear</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Trousers & Shorts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li><a href="#">Handbags</a></li>
+                                            <li><a href="#">Small Leather Goods</a></li>
+                                            <li><a href="#">Jewelry</a></li>
+                                            <li><a href="#">Watches</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Shoes</h5>
+                                        <ul>
+                                            <li><a href="#">Sneakers</a></li>
+                                            <li><a href="#">Loafers & Derbies</a></li>
+                                            <li><a href="#">Boots</a></li>
+                                            <li><a href="#">Sandals</a></li>
+                                            <li><a href="#">Pumps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="page-offer.html">Exclusives</a></li>
+                        <li><a href="#">Editorials</a></li>
+                        <li><a href="#">Boutiques</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header__actions">
+                    <button class="header__action-btn t-search desktop-only" aria-label="Search">
+                        <i class="ri-search-line"></i>
+                    </button>
+                    <a href="#" class="header__action-btn desktop-only" aria-label="Wishlist">
+                        <i class="ri-heart-line"></i>
+                        <span class="badge" id="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <div class="cart-info desktop-only">
+                        <span class="cart-info__label">Bag Total</span>
+                        <span class="cart-info__total" id="cart-total">$0.00</span>
+                    </div>
+                    
+                    <!-- Hamburger (Mobile) -->
+                    <div class="hamburger mobile-only">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay"></div>
+    <nav class="nav-mobile">
+        <ul class="nav-mobile__links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="javascript:void(0)" class="has-submenu">Collections <i class="ri-add-line"></i></a>
+                <div class="submenu">
+                    <a href="page-category.html">Women's Ready-to-Wear</a>
+                    <a href="page-category.html">Men's Ready-to-Wear</a>
+                    <a href="page-category.html">Accessories</a>
+                    <a href="page-category.html">Shoes</a>
+                </div>
+            </li>
+            <li><a href="page-offer.html">Exclusives</a></li>
+            <li><a href="#">Editorials</a></li>
+            <li><a href="#">Boutiques</a></li>
+            <li><a href="#">My Account</a></li>
+        </ul>
+        <div class="nav-mobile__footer">
+            <a href="#">USD | English</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Track Order</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        
+        <div class="container">
+            <div class="breadcrumb reveal-up">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page-category.html">Collections</a></li>
+                    <li>Women's Ready-to-Wear</li>
+                </ul>
+            </div>
+            
+            <div class="page-title reveal-up stagger-1">
+                <h1>Women's Ready-to-Wear</h1>
+                <p style="margin-top: 10px; max-width: 600px; color: var(--text-secondary);">A curated selection of modern silhouettes, crafted from the finest materials. Explore our latest ready-to-wear collection.</p>
+            </div>
+
+            <div class="category-layout reveal-up stagger-2">
+                
+                <!-- Sidebar Filters -->
+                <aside class="category-sidebar">
+                    <div class="filter-group">
+                        <h4>Categories</h4>
+                        <ul class="filter-list">
+                            <li><a href="#" class="active">All Ready-to-Wear</a></li>
+                            <li><a href="#">Dresses & Gowns (24)</a></li>
+                            <li><a href="#">Jackets & Coats (12)</a></li>
+                            <li><a href="#">Knitwear (18)</a></li>
+                            <li><a href="#">Tops & Shirts (31)</a></li>
+                            <li><a href="#">Trousers & Skirts (15)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group mt-md">
+                        <h4>Designer</h4>
+                        <ul class="filter-list">
+                            <li>
+                                <input type="checkbox" id="designer1" class="sr-only">
+                                <label for="designer1">É·STORE Exclusive</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="designer2" class="sr-only">
+                                <label for="designer2">Maison Atelier</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="designer3" class="sr-only">
+                                <label for="designer3">Studio Milano</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group mt-md">
+                        <h4>Color</h4>
+                        <div class="color-options" style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;">
+                            <button style="width:24px; height:24px; border-radius:50%; background:#000; border:1px solid #333;" aria-label="Black"></button>
+                            <button style="width:24px; height:24px; border-radius:50%; background:#fff; border:1px solid #ccc;" aria-label="White"></button>
+                            <button style="width:24px; height:24px; border-radius:50%; background:#8b0000; border:1px solid #ccc;" aria-label="Red"></button>
+                            <button style="width:24px; height:24px; border-radius:50%; background:#000080; border:1px solid #ccc;" aria-label="Navy"></button>
+                            <button style="width:24px; height:24px; border-radius:50%; background:#d2b48c; border:1px solid #ccc;" aria-label="Camel"></button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="category-content">
+                    
+                    <div class="category-controls">
+                        <span class="results-count">Showing 1-9 of 100 results</span>
+                        <div class="sort-by">
+                            <label for="sort">Sort by:</label>
+                            <select id="sort">
+                                <option value="newest">Newest Arrivals</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="popular">Most Popular</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                        
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-card__image">
+                                <a href="product-watch.html"><img src="assets/products/watch.png" alt="Chronograph Excellence"></a>
+                                <div class="product-card__actions">
+                                    <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                    <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                    <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="14500.00" data-name="Chronograph Excellence" data-image="assets/products/watch.png"><i class="ri-shopping-cart-2-line"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Accessories</span>
+                                <h3 class="product-card__title"><a href="product-watch.html">The Chronograph Excellence</a></h3>
+                                <div class="product-card__price">
+                                    <span class="current">$14,500.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-card__image">
+                                <a href="product-dress.html"><img src="assets/products/dress.png" alt="Signature Silk Evening Dress"></a>
+                                <div class="product-card__actions">
+                                    <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                    <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                    <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="3250.00" data-name="Signature Silk Evening Dress" data-image="assets/products/dress.png"><i class="ri-shopping-cart-2-line"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Ready-to-Wear</span>
+                                <h3 class="product-card__title"><a href="product-dress.html">Signature Silk Evening Dress</a></h3>
+                                <div class="product-card__price">
+                                    <span class="current">$3,250.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-card__image">
+                                <a href="product-bag.html"><img src="assets/products/bag.png" alt="Sartorial Leather Handbag"></a>
+                                <div class="product-card__actions">
+                                    <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                    <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                    <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="1850.00" data-name="Sartorial Leather Handbag" data-image="assets/products/bag.png"><i class="ri-shopping-cart-2-line"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Accessories</span>
+                                <h3 class="product-card__title"><a href="product-bag.html">Sartorial Leather Handbag</a></h3>
+                                <div class="product-card__price">
+                                    <span class="current">$1,850.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-card__image">
+                                <a href="product-sunglasses.html"><img src="assets/products/sunglasses.png" alt="Tortoiseshell Designer Sunglasses"></a>
+                                <div class="product-card__actions">
+                                    <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                    <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                    <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="420.00" data-name="Tortoiseshell Designer Sunglasses" data-image="assets/products/sunglasses.png"><i class="ri-shopping-cart-2-line"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-card__content">
+                                <span class="product-card__category">Eyewear</span>
+                                <h3 class="product-card__title"><a href="product-sunglasses.html">Tortoiseshell Designer Sunglasses</a></h3>
+                                <div class="product-card__price">
+                                    <span class="current">$420.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination mt-lg">
+                        <ul style="display:flex; justify-content:center; gap:8px; list-style:none;">
+                            <li><a href="#" class="btn btn--outline" style="padding: 10px 15px;"><i class="ri-arrow-left-s-line"></i></a></li>
+                            <li><a href="#" class="btn btn--primary" style="padding: 10px 15px;">1</a></li>
+                            <li><a href="#" class="btn btn--outline" style="padding: 10px 15px;">2</a></li>
+                            <li><a href="#" class="btn btn--outline" style="padding: 10px 15px;">3</a></li>
+                            <li><span style="padding: 10px;">...</span></li>
+                            <li><a href="#" class="btn btn--outline" style="padding: 10px 15px;">12</a></li>
+                            <li><a href="#" class="btn btn--outline" style="padding: 10px 15px;"><i class="ri-arrow-right-s-line"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top reveal-up">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <a href="index.html">É<span class="accent">·</span>STORE</a>
+                    </div>
+                    <p>Curating the world's most exceptional products for the discerning individual. Experience luxury redefined.</p>
+                    <div class="footer__socials">
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h5>Boutique</h5>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Exclusives</a></li>
+                        <li><a href="#">Lookbook</a></li>
+                        <li><a href="#">Gift Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>Client Services</h5>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>The Maison</h5>
+                    <ul>
+                        <li><a href="#">Our Heritage</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom reveal-up">
+                <p>&copy; 2026 É·STORE. All Rights Reserved.</p>
+                <div class="flex items-center gap-sm">
+                    <p>Privacy Policy</p>
+                    <span class="text-muted">|</span>
+                    <p>Terms of Service</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="ri-home-line"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="page-category.html" class="active">
+                    <i class="ri-search-line"></i>
+                    <span>Shop</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="t-search">
+                    <i class="ri-search-2-line"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" class="iscart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span>Bag</span>
+                    <span class="badge" id="mobile-cart-count">0</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ri-user-line"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <button class="search-overlay__close t-close" aria-label="Close Search">
+            <i class="ri-close-line"></i>
+        </button>
+        <div class="search-overlay__inner">
+            <form action="page-category.html" class="search-overlay__form">
+                <input type="search" placeholder="What are you looking for?" autofocus>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

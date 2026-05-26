@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusives & Offers | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="has-child">
+                            <a href="page-category.html">Collections <i class="ri-arrow-down-s-line"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu__grid">
+                                    <div class="mega-menu__col">
+                                        <h5>Women's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Dresses & Gowns</a></li>
+                                            <li><a href="#">Jackets & Coats</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Tops & Shirts</a></li>
+                                            <li><a href="#">Trousers & Skirts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Men's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Tailoring</a></li>
+                                            <li><a href="#">Outerwear</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Trousers & Shorts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li><a href="#">Handbags</a></li>
+                                            <li><a href="#">Small Leather Goods</a></li>
+                                            <li><a href="#">Jewelry</a></li>
+                                            <li><a href="#">Watches</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Shoes</h5>
+                                        <ul>
+                                            <li><a href="#">Sneakers</a></li>
+                                            <li><a href="#">Loafers & Derbies</a></li>
+                                            <li><a href="#">Boots</a></li>
+                                            <li><a href="#">Sandals</a></li>
+                                            <li><a href="#">Pumps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="page-offer.html" class="active">Exclusives</a></li>
+                        <li><a href="#">Editorials</a></li>
+                        <li><a href="#">Boutiques</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header__actions">
+                    <button class="header__action-btn t-search desktop-only" aria-label="Search">
+                        <i class="ri-search-line"></i>
+                    </button>
+                    <a href="#" class="header__action-btn desktop-only" aria-label="Wishlist">
+                        <i class="ri-heart-line"></i>
+                        <span class="badge" id="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <div class="cart-info desktop-only">
+                        <span class="cart-info__label">Bag Total</span>
+                        <span class="cart-info__total" id="cart-total">$0.00</span>
+                    </div>
+                    
+                    <!-- Hamburger (Mobile) -->
+                    <div class="hamburger mobile-only">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay"></div>
+    <nav class="nav-mobile">
+        <ul class="nav-mobile__links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="javascript:void(0)" class="has-submenu">Collections <i class="ri-add-line"></i></a>
+                <div class="submenu">
+                    <a href="page-category.html">Women's Ready-to-Wear</a>
+                    <a href="page-category.html">Men's Ready-to-Wear</a>
+                    <a href="page-category.html">Accessories</a>
+                    <a href="page-category.html">Shoes</a>
+                </div>
+            </li>
+            <li><a href="page-offer.html" class="active">Exclusives</a></li>
+            <li><a href="#">Editorials</a></li>
+            <li><a href="#">Boutiques</a></li>
+            <li><a href="#">My Account</a></li>
+        </ul>
+        <div class="nav-mobile__footer">
+            <a href="#">USD | English</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Track Order</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        
+        <!-- Hero Offer -->
+        <section class="section" style="padding-top: 40px;">
+            <div class="container">
+                <div class="featured-spotlight reveal-up" style="background: var(--surface); padding: 40px; border-radius: 0;">
+                    <!-- Large Spotlight Card -->
+                    <div class="featured-spotlight__image" style="flex: 1;">
+                        <a href="page-single.html">
+                            <img src="assets/slider/slider2.jpg" alt="Exclusives" style="aspect-ratio: 16/9; object-fit: cover;">
+                        </a>
+                    </div>
+                    <div class="featured-spotlight__content" style="flex: 1; padding: 40px;">
+                        <span class="overline" style="color: var(--accent);">Private Sale Event</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">The Autumn Archive</h2>
+                        <p class="body-large mb-md">Enjoy privileged access to our archive collection. Rare pieces and past season favorites, available for a strictly limited time.</p>
+                        
+                        <div class="featured-spotlight__countdown" style="margin-top: 30px;">
+                            <div class="time-block">
+                                <span class="num">02</span>
+                                <span class="label">Days</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="num">14</span>
+                                <span class="label">Hrs</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="num">45</span>
+                                <span class="label">Min</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="num">12</span>
+                                <span class="label">Sec</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-lg">
+                            <a href="#sale-items" class="btn btn--primary">Shop The Archive</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Grid -->
+        <section id="sale-items" class="section section--no-top">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-header__text">
+                        <span class="overline">Curated Offers</span>
+                        <h2>Exclusive Reductions</h2>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card reveal-up stagger-1">
+                        <div class="product-card__badge">-40%</div>
+                        <div class="product-card__image">
+                            <a href="page-single.html"><img src="assets/products/apparel3.jpg" alt="Tailored Black Coat"></a>
+                            <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="299.99" data-name="Tailored Black Coat" data-image="assets/products/apparel3.jpg"><i class="ri-shopping-cart-2-line"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__category">Outerwear</span>
+                            <h3 class="product-card__title"><a href="page-single.html">Tailored Black Coat Dress</a></h3>
+                            <div class="product-card__price">
+                                <span class="current">$299.99</span>
+                                <span class="original">$499.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card reveal-up stagger-2">
+                        <div class="product-card__badge">-30%</div>
+                        <div class="product-card__image">
+                            <a href="page-single.html"><img src="assets/products/shoe1.jpg" alt="Sneakers"></a>
+                            <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="455.00" data-name="Leather Sneakers" data-image="assets/products/shoe1.jpg"><i class="ri-shopping-cart-2-line"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__category">Shoes</span>
+                            <h3 class="product-card__title"><a href="page-single.html">Signature Leather Sneakers</a></h3>
+                            <div class="product-card__price">
+                                <span class="current">$455.00</span>
+                                <span class="original">$650.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card reveal-up stagger-3">
+                        <div class="product-card__badge">-25%</div>
+                        <div class="product-card__image">
+                            <a href="page-single.html"><img src="assets/products/home1.jpg" alt="Sofa"></a>
+                            <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="595.00" data-name="Velvet Sofa" data-image="assets/products/home1.jpg"><i class="ri-shopping-cart-2-line"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__category">Home Interiors</span>
+                            <h3 class="product-card__title"><a href="page-single.html">Premium Velvet Sofa Collection</a></h3>
+                            <div class="product-card__price">
+                                <span class="current">$595.00</span>
+                                <span class="original">$795.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card reveal-up stagger-1">
+                        <div class="product-card__badge">-50%</div>
+                        <div class="product-card__image">
+                            <a href="page-single.html"><img src="assets/products/electronic2.jpg" alt="Headphones"></a>
+                            <div class="product-card__actions">
+                                <button class="action-btn" aria-label="Add to Wishlist"><i class="ri-heart-line"></i></button>
+                                <button class="action-btn" aria-label="Quick View"><i class="ri-eye-line"></i></button>
+                                <button class="action-btn add-to-cart" aria-label="Add to Cart" data-price="250.00" data-name="Over-Ear Headphones" data-image="assets/products/electronic2.jpg"><i class="ri-shopping-cart-2-line"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__category">Technology</span>
+                            <h3 class="product-card__title"><a href="page-single.html">Noise-Cancelling Headphones</a></h3>
+                            <div class="product-card__price">
+                                <span class="current">$250.00</span>
+                                <span class="original">$500.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top reveal-up">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <a href="index.html">É<span class="accent">·</span>STORE</a>
+                    </div>
+                    <p>Curating the world's most exceptional products for the discerning individual. Experience luxury redefined.</p>
+                    <div class="footer__socials">
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h5>Boutique</h5>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Exclusives</a></li>
+                        <li><a href="#">Lookbook</a></li>
+                        <li><a href="#">Gift Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>Client Services</h5>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>The Maison</h5>
+                    <ul>
+                        <li><a href="#">Our Heritage</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom reveal-up">
+                <p>&copy; 2026 É·STORE. All Rights Reserved.</p>
+                <div class="flex items-center gap-sm">
+                    <p>Privacy Policy</p>
+                    <span class="text-muted">|</span>
+                    <p>Terms of Service</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="ri-home-line"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="page-category.html">
+                    <i class="ri-search-line"></i>
+                    <span>Shop</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="t-search">
+                    <i class="ri-search-2-line"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" class="iscart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span>Bag</span>
+                    <span class="badge" id="mobile-cart-count">0</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ri-user-line"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <button class="search-overlay__close t-close" aria-label="Close Search">
+            <i class="ri-close-line"></i>
+        </button>
+        <div class="search-overlay__inner">
+            <form action="page-category.html" class="search-overlay__form">
+                <input type="search" placeholder="What are you looking for?" autofocus>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

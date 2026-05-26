@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="has-child">
+                            <a href="page-category.html">Collections <i class="ri-arrow-down-s-line"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu__grid">
+                                    <div class="mega-menu__col">
+                                        <h5>Women's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Dresses & Gowns</a></li>
+                                            <li><a href="#">Jackets & Coats</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Tops & Shirts</a></li>
+                                            <li><a href="#">Trousers & Skirts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Men's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Tailoring</a></li>
+                                            <li><a href="#">Outerwear</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Trousers & Shorts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li><a href="#">Handbags</a></li>
+                                            <li><a href="#">Small Leather Goods</a></li>
+                                            <li><a href="#">Jewelry</a></li>
+                                            <li><a href="#">Watches</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Shoes</h5>
+                                        <ul>
+                                            <li><a href="#">Sneakers</a></li>
+                                            <li><a href="#">Loafers & Derbies</a></li>
+                                            <li><a href="#">Boots</a></li>
+                                            <li><a href="#">Sandals</a></li>
+                                            <li><a href="#">Pumps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="page-offer.html">Exclusives</a></li>
+                        <li><a href="#">Editorials</a></li>
+                        <li><a href="#">Boutiques</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header__actions">
+                    <button class="header__action-btn t-search desktop-only" aria-label="Search">
+                        <i class="ri-search-line"></i>
+                    </button>
+                    <a href="#" class="header__action-btn desktop-only" aria-label="Wishlist">
+                        <i class="ri-heart-line"></i>
+                        <span class="badge" id="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <div class="cart-info desktop-only">
+                        <span class="cart-info__label">Bag Total</span>
+                        <span class="cart-info__total" id="cart-total">$0.00</span>
+                    </div>
+                    
+                    <!-- Hamburger (Mobile) -->
+                    <div class="hamburger mobile-only">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay"></div>
+    <nav class="nav-mobile">
+        <ul class="nav-mobile__links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="javascript:void(0)" class="has-submenu">Collections <i class="ri-add-line"></i></a>
+                <div class="submenu">
+                    <a href="page-category.html">Women's Ready-to-Wear</a>
+                    <a href="page-category.html">Men's Ready-to-Wear</a>
+                    <a href="page-category.html">Accessories</a>
+                    <a href="page-category.html">Shoes</a>
+                </div>
+            </li>
+            <li><a href="page-offer.html">Exclusives</a></li>
+            <li><a href="#">Editorials</a></li>
+            <li><a href="#">Boutiques</a></li>
+            <li><a href="#">My Account</a></li>
+        </ul>
+        <div class="nav-mobile__footer">
+            <a href="#">USD | English</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Track Order</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        
+        <div class="container">
+            <div class="breadcrumb reveal-up">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Shopping Bag</li>
+                </ul>
+            </div>
+            
+            <div class="page-title reveal-up stagger-1">
+                <h1>Shopping Bag</h1>
+            </div>
+
+            <div class="cart-layout reveal-up stagger-2">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <table class="cart-table" id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-price="279.99">
+                                <td>
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-thumb">
+                                            <a href="page-single.html"><img src="assets/products/home2.jpg" alt="Ceiling Light"></a>
+                                        </div>
+                                        <div>
+                                            <div class="cart-item-name"><a href="page-single.html">Dimmable Ceiling Light Modern</a></div>
+                                            <div class="cart-item-meta">Color: Gold</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item-price">$279.99</td>
+                                <td>
+                                    <div class="qty-control">
+                                        <button class="minus">-</button>
+                                        <input type="text" class="item-quantity" value="2" min="1" readonly>
+                                        <button class="plus">+</button>
+                                    </div>
+                                </td>
+                                <td class="item-subtotal">$559.98</td>
+                                <td><a href="#" class="item-remove" aria-label="Remove item"><i class="ri-close-line"></i></a></td>
+                            </tr>
+                            <tr data-price="129.99">
+                                <td>
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-thumb">
+                                            <a href="page-single.html"><img src="assets/products/home3.jpg" alt="Storage Cabinet"></a>
+                                        </div>
+                                        <div>
+                                            <div class="cart-item-name"><a href="page-single.html">Modern Storage Cabinet</a></div>
+                                            <div class="cart-item-meta">Type: Stand</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="item-price">$129.99</td>
+                                <td>
+                                    <div class="qty-control">
+                                        <button class="minus">-</button>
+                                        <input type="text" class="item-quantity" value="1" min="1" readonly>
+                                        <button class="plus">+</button>
+                                    </div>
+                                </td>
+                                <td class="item-subtotal">$129.99</td>
+                                <td><a href="#" class="item-remove" aria-label="Remove item"><i class="ri-close-line"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Subtotal</th>
+                                <td id="subtotal">$689.97</td>
+                            </tr>
+                            <tr>
+                                <th>Estimated Shipping</th>
+                                <td>Complimentary</td>
+                            </tr>
+                            <tr>
+                                <th>Estimated Taxes</th>
+                                <td>Calculated at checkout</td>
+                            </tr>
+                            <tr class="grand-total">
+                                <th>Total</th>
+                                <td id="total">$689.97</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="checkout.html" class="btn btn--primary">Proceed to Checkout</a>
+                    <a href="index.html" class="btn btn--ghost mt-sm">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top reveal-up">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <a href="index.html">É<span class="accent">·</span>STORE</a>
+                    </div>
+                    <p>Curating the world's most exceptional products for the discerning individual. Experience luxury redefined.</p>
+                    <div class="footer__socials">
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h5>Boutique</h5>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Exclusives</a></li>
+                        <li><a href="#">Lookbook</a></li>
+                        <li><a href="#">Gift Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>Client Services</h5>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>The Maison</h5>
+                    <ul>
+                        <li><a href="#">Our Heritage</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom reveal-up">
+                <p>&copy; 2026 É·STORE. All Rights Reserved.</p>
+                <div class="flex items-center gap-sm">
+                    <p>Privacy Policy</p>
+                    <span class="text-muted">|</span>
+                    <p>Terms of Service</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="ri-home-line"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="page-category.html">
+                    <i class="ri-search-line"></i>
+                    <span>Shop</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="t-search">
+                    <i class="ri-search-2-line"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" class="active iscart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span>Bag</span>
+                    <span class="badge" id="mobile-cart-count">0</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ri-user-line"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <button class="search-overlay__close t-close" aria-label="Close Search">
+            <i class="ri-close-line"></i>
+        </button>
+        <div class="search-overlay__inner">
+            <form action="page-category.html" class="search-overlay__form">
+                <input type="search" placeholder="What are you looking for?" autofocus>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Simple cart page calculation logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const qtyInputs = document.querySelectorAll('.item-quantity');
+            
+            qtyInputs.forEach(input => {
+                input.addEventListener('change', () => {
+                    const tr = input.closest('tr');
+                    const price = parseFloat(tr.getAttribute('data-price'));
+                    const qty = parseInt(input.value);
+                    const subtotalCell = tr.querySelector('.item-subtotal');
+                    
+                    const subtotal = price * qty;
+                    subtotalCell.textContent = `$${subtotal.toFixed(2)}`;
+                    
+                    recalculateTotals();
+                });
+            });
+
+            const removeBtns = document.querySelectorAll('.item-remove');
+            removeBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    btn.closest('tr').remove();
+                    recalculateTotals();
+                });
+            });
+
+            function recalculateTotals() {
+                const trs = document.querySelectorAll('#cart-table tbody tr');
+                let total = 0;
+                
+                trs.forEach(tr => {
+                    const price = parseFloat(tr.getAttribute('data-price'));
+                    const qty = parseInt(tr.querySelector('.item-quantity').value);
+                    total += (price * qty);
+                });
+                
+                document.getElementById('subtotal').textContent = `$${total.toFixed(2)}`;
+                document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            }
+        });
+    </script>
+</body>
+</html>
