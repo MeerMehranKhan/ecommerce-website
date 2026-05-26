@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | É·STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">É<span class="accent">·</span>STORE</a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="nav-desktop">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="has-child">
+                            <a href="page-category.html">Collections <i class="ri-arrow-down-s-line"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu__grid">
+                                    <div class="mega-menu__col">
+                                        <h5>Women's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Dresses & Gowns</a></li>
+                                            <li><a href="#">Jackets & Coats</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Tops & Shirts</a></li>
+                                            <li><a href="#">Trousers & Skirts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Men's Ready-to-Wear</h5>
+                                        <ul>
+                                            <li><a href="#">Tailoring</a></li>
+                                            <li><a href="#">Outerwear</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Knitwear</a></li>
+                                            <li><a href="#">Trousers & Shorts</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li><a href="#">Handbags</a></li>
+                                            <li><a href="#">Small Leather Goods</a></li>
+                                            <li><a href="#">Jewelry</a></li>
+                                            <li><a href="#">Watches</a></li>
+                                            <li><a href="#">Sunglasses</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu__col">
+                                        <h5>Shoes</h5>
+                                        <ul>
+                                            <li><a href="#">Sneakers</a></li>
+                                            <li><a href="#">Loafers & Derbies</a></li>
+                                            <li><a href="#">Boots</a></li>
+                                            <li><a href="#">Sandals</a></li>
+                                            <li><a href="#">Pumps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="page-offer.html">Exclusives</a></li>
+                        <li><a href="#">Editorials</a></li>
+                        <li><a href="#">Boutiques</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header__actions">
+                    <button class="header__action-btn t-search desktop-only" aria-label="Search">
+                        <i class="ri-search-line"></i>
+                    </button>
+                    <a href="#" class="header__action-btn desktop-only" aria-label="Wishlist">
+                        <i class="ri-heart-line"></i>
+                        <span class="badge" id="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="header__action-btn iscart" aria-label="Cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="badge" id="cart-count">0</span>
+                    </a>
+                    <div class="cart-info desktop-only">
+                        <span class="cart-info__label">Bag Total</span>
+                        <span class="cart-info__total" id="cart-total">$0.00</span>
+                    </div>
+                    
+                    <!-- Hamburger (Mobile) -->
+                    <div class="hamburger mobile-only">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay"></div>
+    <nav class="nav-mobile">
+        <ul class="nav-mobile__links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="javascript:void(0)" class="has-submenu">Collections <i class="ri-add-line"></i></a>
+                <div class="submenu">
+                    <a href="page-category.html">Women's Ready-to-Wear</a>
+                    <a href="page-category.html">Men's Ready-to-Wear</a>
+                    <a href="page-category.html">Accessories</a>
+                    <a href="page-category.html">Shoes</a>
+                </div>
+            </li>
+            <li><a href="page-offer.html">Exclusives</a></li>
+            <li><a href="#">Editorials</a></li>
+            <li><a href="#">Boutiques</a></li>
+            <li><a href="#">My Account</a></li>
+        </ul>
+        <div class="nav-mobile__footer">
+            <a href="#">USD | English</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Track Order</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        
+        <div class="container">
+            <div class="breadcrumb reveal-up">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Shopping Bag</a></li>
+                    <li>Checkout</li>
+                </ul>
+            </div>
+            
+            <div class="page-title reveal-up stagger-1">
+                <h1>Checkout</h1>
+            </div>
+
+            <div class="checkout-layout reveal-up stagger-2">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    
+                    <!-- Contact Info -->
+                    <div class="form-section">
+                        <h3>1. Contact Information</h3>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Address -->
+                    <div class="form-section">
+                        <h3>2. Shipping Address</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group mb-md">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country" required>
+                                    <option value="us">United States</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="fr">France</option>
+                                    <option value="it">Italy</option>
+                                    <option value="ae">United Arab Emirates</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State / Province</label>
+                                <input type="text" id="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">Postal Code</label>
+                                <input type="text" id="zip" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+
+                    <!-- Payment -->
+                    <div class="form-section">
+                        <h3>3. Payment Details</h3>
+                        <div class="form-group mb-md">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" required>
+                        </div>
+                        <div class="form-group mb-md">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" placeholder="0000 0000 0000 0000" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-lg">
+                        <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Complete Secure Purchase</button>
+                    </div>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="order-summary__items">
+                        <!-- Item 1 -->
+                        <div class="order-item">
+                            <div class="order-item__thumb">
+                                <img src="assets/products/home2.jpg" alt="Ceiling Light">
+                            </div>
+                            <div class="order-item__info">
+                                <p>Dimmable Ceiling Light Modern</p>
+                                <span>Qty: 2 | Color: Gold</span>
+                            </div>
+                            <div class="order-item__price">$559.98</div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="order-item">
+                            <div class="order-item__thumb">
+                                <img src="assets/products/home3.jpg" alt="Storage Cabinet">
+                            </div>
+                            <div class="order-item__info">
+                                <p>Modern Storage Cabinet</p>
+                                <span>Qty: 1 | Type: Stand</span>
+                            </div>
+                            <div class="order-item__price">$129.99</div>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary" style="padding:0; border:none; position:static;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Subtotal</th>
+                                    <td>$689.97</td>
+                                </tr>
+                                <tr>
+                                    <th>Estimated Shipping</th>
+                                    <td>Complimentary</td>
+                                </tr>
+                                <tr>
+                                    <th>Estimated Taxes</th>
+                                    <td>$62.10</td>
+                                </tr>
+                                <tr class="grand-total">
+                                    <th>Total</th>
+                                    <td>$752.07</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top reveal-up">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <a href="index.html">É<span class="accent">·</span>STORE</a>
+                    </div>
+                    <p>Curating the world's most exceptional products for the discerning individual. Experience luxury redefined.</p>
+                    <div class="footer__socials">
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h5>Boutique</h5>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Exclusives</a></li>
+                        <li><a href="#">Lookbook</a></li>
+                        <li><a href="#">Gift Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>Client Services</h5>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h5>The Maison</h5>
+                    <ul>
+                        <li><a href="#">Our Heritage</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom reveal-up">
+                <p>&copy; 2026 É·STORE. All Rights Reserved.</p>
+                <div class="flex items-center gap-sm">
+                    <p>Privacy Policy</p>
+                    <span class="text-muted">|</span>
+                    <p>Terms of Service</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
