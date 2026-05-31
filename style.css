@@ -1,17 +1,5 @@
-/* ============================================================================
-   É·STORE — LUXURY E-COMMERCE DESIGN SYSTEM
-   A premium dark-luxury CSS framework for high-end shopping experiences.
-   Built with vanilla CSS, no frameworks.
-   ============================================================================ */
-
-/* --------------------------------------------------------------------------
-   FONTS
-   -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* --------------------------------------------------------------------------
-   DESIGN TOKENS (CSS Custom Properties)
-   -------------------------------------------------------------------------- */
 :root {
     /* Colour Palette — Dark Luxury */
     --bg-primary:       #0a0a0a;

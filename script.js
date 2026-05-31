@@ -1,8 +1,3 @@
-/* ============================================================================
-   É·STORE — LUXURY E-COMMERCE JAVASCRIPT
-   Vanilla JS interactions, animations, and cart logic.
-   ============================================================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. HEADER SCROLL STATE ---
